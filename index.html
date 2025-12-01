@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SV Design & Development DOO</title>
+    <style>
+        :root {
+            --primary-color: #0056b3; /* Синий корпоративный */
+            --text-color: #333;
+            --bg-light: #f4f7f6;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 50, 100, 0.7), rgba(0, 50, 100, 0.7)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem auto;
+        }
+
+        .btn {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 10px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #003d80;
+        }
+
+        /* Sections */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .service-card {
+            background: var(--bg-light);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+        }
+
+        .service-card h3 {
+            margin-top: 0;
+        }
+
+        /* Contact Section */
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .contact-item {
+            margin: 20px;
+        }
+
+        .contact-item strong {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+
+        footer {
+            background-color: #222;
+            color: #aaa;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .nav-links { display: none; } /* Упрощено для мобильных */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="#" class="logo">SV Design & Development</a>
+            <div class="nav-links">
+                <a href="#about">О нас</a>
+                <a href="#services">Услуги</a>
+                <a href="#contact">Контакты</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Профессиональные Архитектурные Решения</h1>
+        <p>Инжиниринг, дизайн и технический консалтинг мирового уровня.</p>
+        <a href="#contact" class="btn">Связаться с нами</a>
+    </section>
+
+    <section id="about" class="container">
+        <h2>О компании</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <strong>SV Design & Development DOO</strong> — ведущая компания в сфере архитектурных и инженерных услуг. 
+            Мы предоставляем полный спектр профессиональных научно-технических решений. 
+            Под руководством Sanja Velisavljevic мы стремимся к инновациям и качеству в каждом проекте.
+        </p>
+    </section>
+
+    <section id="services" style="background-color: #fff;">
+        <div class="container">
+            <h2>Наши услуги</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Архитектурное проектирование</h3>
+                    <p>Комплексная разработка архитектурных решений для жилых и коммерческих объектов.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Инжиниринг</h3>
+                    <p>Профессиональные инженерные расчеты и техническое сопровождение проектов.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Технический консалтинг</h3>
+                    <p>Консультации по научным и техническим вопросам в сфере строительства и дизайна.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container">
+        <h2>Контакты</h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                <strong>Адрес:</strong>
+                Rastislava Marica 6, Beograd (Zvezdara)<br>
+                Grad Beograd, PAK 149105<br>
+                Serbia
+            </div>
+            <div class="contact-item">
+                <strong>Email:</strong>
+                <a href="mailto:info@svdesigndevelopment.info" style="color: inherit;">info@svdesigndevelopment.info</a>
+            </div>
+            <div class="contact-item">
+                <strong>Руководитель:</strong>
+                Sanja Velisavljevic
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 SV Design & Development DOO. Все права защищены.</p>
+    </footer>
+
+</body>
+</html>
